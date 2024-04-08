@@ -1,0 +1,63 @@
+footer.end h1 {
+    color: rgb(228, 218, 218);
+    font-size: 20px;
+    display: flex;
+  }
+  /* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: var(--sidebar-bg-color);
+  padding: 24px;
+}
+
+/* Topbar Styles */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--topbar-bg-color);
+  padding: 14px 30px;
+}
+
+/* Playlist Styles */
+.playlist .list .item {
+  padding: 15px;
+  background-color: var(--playlist-bg-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+:root {
+    --main-bg-color: #121212;
+    --sidebar-bg-color: #000000;
+    --text-color: #b3b3b3;
+    --link-hover-color: #ffffff;
+    --topbar-bg-color: #000;
+    --button-bg-color: #ffffff;
+    --button-text-color: #000000;
+    --playlist-bg-color: #18181857;
+    --playlist-hover-color: rgb(199, 112, 216);
+    --footer-bg-color: rgba(216, 112, 147, 0.534);
+  }
+  
+  body {
+    background-color: var(--main-bg-color);
+  }
+  
+  .sidebar {
+    background-color: var(--sidebar-bg-color);
+  }
+  
+  /* Apply the same approach for other elements using variables */
+
+.playlist .list .item:hover {
+  background-color: var(--playlist-hover-color);
+}
+
+/* Footer Styles */
+footer.end {
+  background-color: var(--footer-bg-color);
+}

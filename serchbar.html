@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Bar</title>
+  <style>
+    /* Add your CSS styles here */
+    #search-bar {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #search-results {
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Search Bar -->
+  <input type="text" id="search-bar" placeholder="Search" oninput="handleSearch()">
+  
+  <!-- Search Results -->
+  <div id="search-results"></div>
+
+  <!-- JavaScript (inline) -->
+  <script>
+    function handleSearch() {
+      // Get the search query
+      var searchQuery = document.getElementById('search-bar').value.toLowerCase();
+
+      // Simulate search results (you can replace this with actual data fetching)
+      var data = ["Apple", "Banana", "Orange", "Grapes", "Mango"];
+      var results = data.filter(item => item.toLowerCase().includes(searchQuery));
+
+      // Display search results
+      var resultsContainer = document.getElementById('search-results');
+      resultsContainer.innerHTML = '';
+
+      if (results.length > 0) {
+        results.forEach(result => {
+          var resultItem = document.createElement('div');
+          resultItem.textContent = result;
+          resultsContainer.appendChild(resultItem);
+        });
+        resultsContainer.style.display = 'block';
+      } else {
+        resultsContainer.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
